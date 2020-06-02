@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<style>
+    /* --------------css3 伪元素已 :: 开头 -------------*/
+    
+    p::first-letter {
+        /*每一个p标签下的第一个单词,变成30P和蓝色 */
+        font-size: 30px;
+        color: blue;
+    }
+    
+    p::first-letter {
+        /*每一个p标签下的第一行,变成50P和红色色 */
+        font-size: 50px;
+        color: red;
+    }
+    /* ------------css3 伪类已 : 开头---------------*/
+    
+    p.test:hover {
+        /* 鼠标悬浮在类为test 的元素,元素的宽带变为600px,背景颜色为黄色 */
+        width: 600px;
+        background-color: yellow;
+    }
+    
+    input:focus {
+        /*某元素失去得到焦点时,宽带变成200px;*/
+        width: 200px;
+    }
+    /*-----------not伪类选择器--------------*/
+    
+    p:not(.test) {
+        /* 某个元素除了类等于test的元素,其他元素的宽度为500px; */
+        width: 500px;
+    }
+</style>
+
+
+
+
+
+
+
+
+<body>
+
+    <p class="test">段落一</p>
+    <p>段落二</p>
+    <p>段落三</p>
+    <input type="text">
+
+
+
+</body>
+
+</html>

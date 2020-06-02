@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 500px;
+            width: 1000px;
+            background-color: cornsilk;
+             /* 设置行高  垂直居中*/
+             /* line-height: 500px; */
+             /* 父: 相对定位 */
+             position: relative;
+
+        }
+        .one{
+            height: 50px;
+            width: 100px; 
+            background-color:crimson;
+            /* 文本居中 */
+            text-align: center;
+            /* 设置行高  垂直居中 */
+            line-height: 50px;
+
+             /* 子: 绝对定位 */
+             position:absolute;
+             left: 50%;
+             top:50%;
+             /* 本元素的一半 */
+             margin-left: -100px;
+             margin-top: -25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 浮动后的元素都会转换为 行内块级标签 -->
+    <div class="box">
+        <p class="one">第一个</p>
+    </div>
+
+
+</body>
+</html>

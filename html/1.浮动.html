@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 600px;
+            width: 90%;
+            background-color: cornsilk;
+            margin: 50px;
+        }
+        .one{
+            height: 300px;
+            width: 30%;
+            background-color:crimson;
+            float: left;
+        }
+        .two{
+            height: 400px;
+            width: 20%;
+            background-color:yellow;
+            float: right;
+        } 
+    </style>
+</head>
+<body>
+    <!-- 浮动后的元素都会转换为 行内块级标签 -->
+    <!-- 
+
+        1.所谓浮动就是使元素脱离原来的文本流
+        2.浮动以后元素会一直向父元素的最上方移动
+        3.直到遇到父元素的边框或者其他浮动元素,会停止移动
+        4.如果浮动元素的上边是一个块元素,则浮动元素不会覆盖元素
+        5.浮动元素不会超过它上边的浮动的兄弟元素,最多一边齐
+        6.浮动元素不会覆盖文字,文字会自动环绕在浮动元素的周围,可以通过浮动来实现文字环绕的效果
+        
+        块级元素浮动时,宽度会默认被内容撑开(变成行内块级元素)
+        块元素  -> 不会独占一行,宽度和高度都被内容撑开
+        行业元素  -> 脱离文档流后变成行内块级元素
+
+     -->
+    <div class="box">
+        <span class="one">第一个</span>
+        <span class="two">第二个</span>
+    </div>
+
+
+</body>
+</html>

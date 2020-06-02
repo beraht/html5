@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            height: 700px;
+            width: 900px;
+            background-color: bisque;
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+
+        .box1{
+            height: 600px;
+            width: 800px;
+            background-color:cyan;
+            position: relative;
+        }
+
+        .one{
+            height: 100px;
+            width: 200px;
+            background-color:crimson;
+        }
+
+        .two{
+            height: 100px;
+            width: 200px;
+            background-color:yellow;
+            position:absolute;
+            left: 100px;
+            top: 1px;
+
+        }
+
+        .three{
+            height: 200px;
+            width: 400px;
+            background-color: cornsilk;
+        } 
+
+    </style>
+</head>
+<body>
+    <!-- 
+              绝对定位
+        1. 开启元素的绝对定位后,如果不设置偏移量,元素位置不会发生任何变化
+        2. 绝对定位的元素是相对于距离他最近的开启了定位的祖先元素进行定位,如果所有的祖先元素都没有开启定位,则相对于浏览器窗口进行定位
+        3. 绝对定位的元素会完全脱离文档流
+        4. 绝对定位会改变元素的性质,行业元素还是行内元素块级元素
+        5. 绝对定位的元素会提升一个层级
+     -->
+     <div class="box">
+
+        <div class="box1">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+        </div>
+
+     </div>
+        
+
+</body>
+</html>
