@@ -7,8 +7,6 @@
     <style>
         #box1{
             border: 1px solid red;
-            /* 开启BFC */
-            overflow: hidden;
         }
         #box2{
             height: 200px;
@@ -27,21 +25,16 @@
 <body>
 
     <!-- 
-        方案一 :  开启BFC , BFC是隐含属性,默认是关闭状态的
-        开启BFC以后元素将具有如下特性:
-              1.父元素的垂直外边距不会与子元素重叠
-              2.开启BFC的元素不会被浮动元素所覆盖
-              3.开始BFC的元素可以包含浮动子元素  
-        开始BFC的方式(多种):
-                1.设置元素浮动
-                2.设置元素绝对定位
-                3.设置元素的类型为inline-block
-                4.设置overflow为一个非没默认值,一般使用    overflow:hidden来开始BFC   
+        方案二 :  在塌陷的父元素的最后添加一个空白DIV,然后对该div进行清除浮动
         
     -->
     <div id="box1">
+        
         <div id="box2"></div>
+        <!-- 最后添加一个空白DIV ,然后对该div进行清除浮动-->
+        <div style="clear: both;"></div>
     </div>
+   
     <div id="box3"></div>
 </body>
 </html>
