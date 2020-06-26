@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        #box{
+            width: 80%;
+            height: 55rem;
+            background-color: darkkhaki;
+            /* 父元素伸缩布局 */
+            display: flex;
+            /* 盒子的主轴方向 */
+            flex-direction:row;
+            /* 主轴对齐方式 */
+            /* justify-content: space-between; */
+            /* (侧轴)垂直方向对齐 */
+            /* align-items: center;  */
+            /* 是否换行 */
+            /* flex-wrap:wrap; */
+
+        }
+        #box div{
+            width: 10rem;
+            height: 10rem;
+            background-color: coral;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="box1" style="flex: 1; height: 12rem;">1</div>
+        <div class="box2" style="flex: 3;height: 12.9rem;" >2</div>
+        <div class="box3" style="flex: 2;height: 12rem;" >3</div>
+        <div class="box4" style="flex: 1;height: 16rem;">4</div>
+        <div class="box5" style="flex: 3;height: 12.5rem;">5</div>
+        <!-- <div class="box6" style="height: 15rem;">6</div>
+        <div class="box7" style="height: 15rem;">7</div>
+        <div class="box8" style="height: 15.5rem;">8</div> -->
+    </div>
+</body>
+</html>

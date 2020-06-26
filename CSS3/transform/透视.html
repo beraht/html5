@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 上帝视角 */
+        body{
+            /* 透视 */
+            perspective: 360px;
+        }
+        img{
+            margin: 100px;
+            transition: all 5s linear;
+            
+        }
+        img:hover{
+            /* 旋转 */
+            /* transform:rotateY(360deg) */
+            transform: translate(300px,300px);
+        }
+    </style>
+</head>
+<body>
+    <!-- 透视:
+             视距 距离 眼睛到屏幕的距离
+             视距越大,效果不明显
+             视距越小,透视效果越明显
+     -->
+
+
+     <img src="../img/mac.png" alt="" width="60%">
+</body>
+</html>

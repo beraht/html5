@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            /* 设置过渡效果 */
+            transition: all 2s linear;
+          
+            margin: 50px auto;
+        }
+
+        div:hover{
+            /* 以中心为起点,放大二倍 */
+            /* transform: scale(2); */
+            /* 以中心为起点,缩小0.5倍 */
+            /* transform: scale(0.5); */
+            /* 以中心为起点,X轴放大二倍 */
+            transform: scaleX(2);
+        }
+
+        section{
+            width: 380px;
+            height: 250px;
+            margin: 100px auto;
+            border: 10px solid red;
+            overflow: hidden;
+            text-align: center;
+           
+        }
+        section img{
+            width: 90%;
+            /* 设置过渡效果 */
+           transition: all 5s linear;
+        }
+        section:hover img{
+            transform: scale(0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <div>我要缩放</div>
+
+    <section>
+        <img src="../img/mac.png" alt="">
+    </section>
+
+</body>
+</html>

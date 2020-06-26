@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            /* 设置过渡效果 */
+            transition: all 2s linear;
+        }
+        div:active{
+            /* 横竖移动100px */
+            /* transform: translateX(500px);
+            transform: translateY(500px); */
+            /*  斜着移动300px  */
+            transform: translate(300px,300px);
+        }
+    </style>
+</head>
+<body>
+    <div>我要移动</div>
+</body>
+</html>

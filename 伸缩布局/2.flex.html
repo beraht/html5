@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 500px;
+            height: 550px;
+            background-color: darkkhaki;
+            /* 父元素伸缩布局 */
+            display: flex;
+            /* 盒子的主轴方向 */
+            flex-direction:row;
+            /* 主轴对齐方式 */
+            /* justify-content: space-between; */
+            /* (侧轴)垂直方向对齐 */
+            /* align-items: center;  */
+            /* 是否换行 */
+            flex-wrap:wrap;
+            /* 对行对齐方式 */
+            align-content:flex-start;
+
+        }
+        #box div{
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="box1" style="width: 130px; height: 120px;">1</div>
+        <div class="box2" style="width: 136px; height: 129px;" >2</div>
+        <div class="box3" style="width: 120px; height: 120px;" >3</div>
+        <div class="box4" style="width: 150px; height: 160px;">4</div>
+        <div class="box5" style="width: 133px; height: 125px;">5</div>
+        <div class="box6" style="width: 139px; height: 150px;">6</div>
+        <div class="box7" style="width: 139px; height: 150px;">7</div>
+        <div class="box8" style="width: 156px; height: 155px;">8</div>
+    </div>
+</body>
+</html>

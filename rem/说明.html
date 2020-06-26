@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+    html{
+        /*  默认 1rem = 16px */
+        /* font-size: 16px; */
+         /*  修改 1rem = 10px */
+         font-size: 10px;
+    }
+    body{
+        font-size: 1.5rem;
+    }
+    #box1{
+        width: 18.75rem;
+        height: 12.5rem;
+        background-color: red;   
+    }
+    #box2{
+        width: 12.5rem;
+        height: 6.25rem;
+        background-color:blue; 
+    }
+</style>
+<body>
+    <!-- 
+        概念
+        rem 可以在用户浏览网页时,根据屏幕的尺寸,来向用户展示更合适用户的布局,文字,图片,按钮
+        rem: 是指相对于根元素的字体大小的单位
+        一旦根节点html定义的font-size 变化,那么整个网页中运用到rem的也会随之变化
+        使用:
+            浏览器的默认字体高度都是16px,所有未经调整的浏览器都符合: 1em = 16px ,那么12px=0.75rem,10px = 0.625rem
+            重新计算那些被放大的字体rem数值,避免字体大小的重复声明
+            目前PC开始普遍使用rem,移动端基本完全使用
+     -->
+    <div id="box1">box1box1box1box1box1</div> 
+    <div id="box2">box2box2box2box2box2</div>
+
+
+
+</body>
+</html>

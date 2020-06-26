@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 500px;
+            height: 350px;
+            background-color: darkkhaki;
+            /* 父元素伸缩布局 */
+            display: flex;
+            /* 盒子的主轴方向 */
+            flex-direction:row;
+            /* 主轴对齐方式 */
+            justify-content:space-around;
+            /* (侧轴)垂直方向对齐 */
+            /* align-items: center;  */
+        }
+        #box div{
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+        }
+
+        /* flex子项单独对齐 */
+        .flex-test{
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        两大重要的属性:
+            display:inline-flex 将盒子用于弹性伸缩盒展示,用于行内元素
+            display:flex 将盒子用于弹性伸缩盒展示,用于块级元素
+     -->
+
+        <!-- 
+
+            盒子的主轴方向:   
+                    1. 块级元素从上到下: 主轴 从上往下
+                    2. 行业元素从左到右: 主轴 从左到右
+                    主要看盒子的排布方式: 横还是竖
+         -->
+
+         <!-- 
+          flex-direction  用于指定flex主轴的方向,继而决定flex子项在flex容器中的位置
+            row : 默认值,表示水平方向从左到右排列,此时水平方向轴线是主轴
+            row-reverse: 与row相反
+            column:表示垂直方向从上到下排列,此时垂直方向轴线是主轴    
+            column-reverse:与column相反
+          -->
+
+        <!-- 
+          justify-content  用于指定flex的子项对齐方式
+            flex-start: 默认值,表示与行的起始位置对齐
+            flex-end: 表示与行的结束位置,
+            center: 中间对齐
+            space-between: 两端对齐,中间间距相等
+            space-around: 间距相等,中间间距是两端间距的2倍
+          -->
+
+          <!-- 
+            align-items: 用于指定侧轴(垂直方向)上的flex子项的对齐方式
+           -->
+
+          <!-- 
+            flex-wrap: 主轴上的子项是否换行
+          -->
+
+          <!-- 
+            align-self 用于单独指定某flex子项的对齐方式
+           -->
+           <!-- 
+            align-content 用于多行的对齐方式
+            -->
+
+          <div id="box">
+              <div class="box1">1</div>
+              <div class="box2" style="background-color:cornflowerblue">2</div>
+              <div class="box3 flex-test" style="background-color: crimson;">3</div>
+          </div>
+
+
+</body>
+</html>

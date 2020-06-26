@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            border: 1px solid red;
+        }
+        #box2{
+            height: 200px;
+            width: 10%;
+            background-color:gold;
+
+        }
+        #box3{
+            height: 50px;
+            width: 100%;
+            background-color:cyan;
+        }
+
+        #box5{
+            /* border: 1px solid mediumorchid; */
+            background-color:mediumvioletred;
+            width: 200px;
+            height: 200px;
+        }
+        #box6{
+            height: 100px;
+            width: 100px;
+            background-color:red;
+            /* 子元素和父元素相邻的垂直外边距会发生重叠,子元素的外边距会传递给父元素  */
+            margin-top: 50px;
+        }
+
+        /* 相当于
+                <div id="box5">
+                    <!-- 使用空的table标签可以隔离父子元素的外边距,组织外边距的重叠  -->
+                    <!-- <table></table> -->
+                    <div id="box6"></div>
+                </div>
+          */
+        #box5::before{
+            content: '';
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        方案四 :    
+            1. 子标签浮动,父标签高度塌陷
+            2. 子元素和父元素相邻的 垂直外边距 会发送重叠, 子元素的外边距会传递给父元素
+            3. 使用空的table标签可以隔离父子元素的外边距,组织外边距的重叠
+        经过修改后的clearfix 是一个多功能的,既可以解决高度塌陷,又可以确保父元素和子元素外边距不会重叠
+        
+    -->
+    <div id="box1">
+        <div id="box2"></div>
+    </div>
+    <div id="box3"></div>
+
+    <div id="box5">
+        <!-- 使用空的table标签可以隔离父子元素的外边距,组织外边距的重叠  -->
+        <!-- <table></table> -->
+        <div id="box6"></div>
+    </div>
+
+</body>
+</html>
